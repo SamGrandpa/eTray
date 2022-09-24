@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/checkout_style.css">
+</head>
+
+
+
+<body>
+	
+	<!-- navigation menu: buttons and search bar -->
+	<header>
+		<a class="logo" href="index.html">
+            <img src="images/eTray_logo.svg" alt="eTray logo" height= 100px width=auto>
+        </a>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="nearby.html">Restaurants</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="backToMenuBox">
+		<form action="mcdonalds_ordering.html">
+		<button class="backToMenuButton"> Back to Menu</button></form>
+	</div>
+
+<div id="checkout-page-container">
+	<div id="paymentBox">
+			<p><img src="https://img.icons8.com/cotton/2x/mobile-payment--v3.png" alt="Trulli" width="35" height="35">Payment Options</p>
+			
+			<label for="Paypal">	&nbsp; Paypal&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;&nbsp;</label>
+			<input type="radio" id="Paypal" name="options" value="Paypal"><br>
+			
+			<label for="Cash">	&nbsp; Cash	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;		</label>
+			<input type="radio" id="Cash" name="options" value="Cash"><br>
+			
+			<label for="MyWallet">	&nbsp; MyWallet	&nbsp;	&nbsp;	&nbsp;</label>
+			<input type="radio" id="MyWallet" name="options" value="MyWallet"><br>
+		
+		
+		<br>
+		<div id="cards">
+		<br>
+		<button class="card">Card 1</button>
+		<button class="plus">+</button>
+		</br>
+		
+		<br>
+		<button class="card">Card 2</button>
+		<button class="minus">-</button>
+		</br>
+		</div>
+		
+	</div>
+
+
+
+	<div id="addressBox">
+		<p><img src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png" alt="Trulli" width="35" height="35">
+		Delivery Address</p><br>
+		<input class="textbox" type="string" placeholder="Change Address" oninput="updateAddress(this.value)" onchange="updateAddress(this.value)"> <button class="button button1">Save</button>
+		<div id="currentAddressBox">
+			<p id="new-address">Current Address: 960 Chancellor Drive, WINNIPEG, CA</p>
+			<p>New Address:<span id="outputAddress"></span></p>
+
+			<script>
+			function updateAddress(usrAddr) {
+			
+			if(usrAddr==="")
+			document.getElementById("outputAddress").innerHTML="960 Chancellor Drive, WINNIPEG, CA";
+			else{
+				usrAddr = (usrAddr);
+				document.getElementById("outputAddress").innerHTML=usrAddr;
+
+			}
+			}
+			</script>
+		</div>
+
+	</div>
+
+	<div id="receipt-window">
+		<p><img src="https://previews.123rf.com/images/dacianlogan/dacianlogan1712/dacianlogan171200010/91897814-vector-sales-receipt-icon.jpg" alt="Trulli" width="35" height="35">Order Receipt</p>
+		<div id="receipt">
+		</div>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button class="submitButton" onclick="confirmPopup()">submit</button>
+		
+
+	</div>
+</div>
+
+<!-- Order Confirmation Dialog -->
+<div class="bg-modal-confirm">
+	<div class="modal-content">
+		<h1 id="confirm-text">Complete the Order?<br><br><br>
+		</h1>
+		<form action="thanks.html">
+			<input id="Yes" type=submit value="Yes" />
+			<input id="No" type="button" value="No" onclick="closePopup()">
+		</form>	
+		
+	</div>
+</div>
+
+
+
+<script src="js/checkout_script.js"></script>
+</body>
+</html>

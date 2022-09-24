@@ -1,0 +1,102 @@
+/* navbar code based on this flexbox tutorial: https://www.youtube.com/watch?v=PwWHL3RyQgk&list=PL0UBxiun9vDA03QcfNg3h_yiC5uc3Xd_Z&index=7&t=7s*/
+
+body {
+  background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-018-cloudy-knoxville.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-family: "Verdana", sans-serif;
+}
+
+li, a{
+  font-family: "Verdana", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  text-align: left;
+  background: white;
+  color: black;
+  opacity: 0.8;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_links {
+  font-weight: bold;
+  list-style: none;
+}
+
+
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #808080;
+}
+
+.AddressContainer {
+  width: 500px;
+  margin: 0 auto;
+
+  /*center vertically and horizontally*/
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+input[type=text], select, textarea {
+  margin: 5px;
+  width: 300px;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+  text-align: center;
+  font-family: "verdana", sans-serif;
+}
+
+input[type=submit] {
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  margin: 5px;  
+  background-color: #a0a0a0;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "verdana", sans-serif;
+
+}
+
+
+

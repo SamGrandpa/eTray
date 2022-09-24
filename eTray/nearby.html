@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/nearby_style.css">
+</head>	 
+<footer>
+  <p>Contact<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+
+<body>
+<!-- navigation menu: buttons and search bar -->
+<header>
+	<a class="logo" href="index.html">
+		<img src="images/eTray_logo.svg" alt="eTray logo" height= 100px width=auto>
+	</a>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="nearby.html">Restaurants</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+ </header>
+
+<!-- scroller menu: buttons for horizontal scolling -->
+<div id="scroller1-leftButton">
+<div href="javascript: void(0);" onclick="scrollDiv1('l', 150); return false;"><img src="images/leftClick.png" width=50px; height=50px;></div>
+</div>
+
+<div id="scroller1-rightButton">
+<div href="javascript: void(0);" onclick="scrollDiv1('r', 150); return false;"><img src="images/rightClick.png" width=50px; height=50px;></div>
+</div>
+
+<div id="scroller2-leftButton">
+<div href="javascript: void(0);" onclick="scrollDiv2('l', 150); return false;"><img src="images/leftClick.png" width=50px; height=50px;></div>
+</div>
+
+<div id="scroller2-rightButton">
+<div href="javascript: void(0);" onclick="scrollDiv2('r', 150); return false;"><img src="images/rightClick.png" width=50px; height=50px;></div>
+</div>
+
+<!-- texts -->
+<div id="texts">
+<p style="position: absolute; top: 150px; left: 200px;">Popular Restaurants</p>
+<p style="position: absolute; top: 325px; left: 200px;">Nearby Restaurants</p>
+<p style="position: absolute; top: 500px; left: 200px;">Recently Ordered From:</p>
+</div>
+
+<!-- scroller menu: content of nearby restaurants -->
+<div id="scroller1">
+    <div id="inner-scroller1">
+	<a href="mcdonalds_ordering.html">
+	<img src="images/McDonalds.png"   width = 150px; height = 150px;>
+	<img src="images/Tim.png"         width = 150px; height = 150px;>
+	<img src="images/AandW.png"       width = 150px; height = 150px;>
+	<img src="images/Startbucks.png"  width = 150px; height = 150px;>
+	<img src="images/Burger King.png" width = 150px; height = 150px;>
+	<img src="images/SubWay.png"	  width = 150px; height = 150px;>
+	<img src="images/sevenEleven.png" width = 150px; height = 150px;>
+	<img src="images/Pizza Pizza.png" width = 150px; height = 150px;></a>
+    </div>
+</div>
+
+<div id="scroller2">
+    <div id="inner-scroller2">
+	<a href="mcdonalds_ordering.html">
+	<img src="images/Pizza Pizza.png" width = 150px; height = 150px;>
+	<img src="images/wendys.png"      width = 150px; height = 150px;>
+	<img src="images/pizzaHeaven.png" width = 150px; height = 150px;>
+	<img src="images/McDonalds.png"   width = 150px; height = 150px;>
+	<img src="images/Tim.png"  		  width = 150px; height = 150px;>
+	<img src="images/AandW.png"       width = 150px; height = 150px;>
+	<img src="images/Startbucks.png"  width = 150px; height = 150px;>
+	<img src="images/Burger King.png" width = 150px; height = 150px;></a>
+    </div>
+</div>
+
+<div id="scroller3">
+	<div id="inner-scroller3">
+	<a href="mcdonalds_ordering.html">
+	<img src="images/McDonalds.png"   width = 150px; height = 150px;>
+	<img src="images/Burger King.png" width = 150px; height = 150px;></a>
+	</div>
+</div>
+
+	<script src="nearby_script.js"></script>
+</body>
+</html>

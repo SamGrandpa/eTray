@@ -1,0 +1,842 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "shortcut icon" href =  
+        "images/fork-and-spoon-possible logo.png" 
+        type = "image/x-icon"> 
+        <title>eTray - ordering</title>
+        <link rel="stylesheet" type="text/css"
+        href="css/mcdonalds_style.css"/>  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <script defer src="js/mcdonalds-scripts.js" ></script> 
+    </head>
+
+    <body>
+        <!-- navigation menu -->
+        <header>
+            <a class="logo" href="index.html" id="homebtn">
+                <img src="images/eTray_logo.svg" alt="eTray logo" height= 100px width=auto>
+            </a>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="nearby.html">Restaurants</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Accountinfo.html">My&nbspAccount</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="order-container">
+            <div class="food-menu">
+                <h1>Current Restaurant Menu: McDonald's</h1>
+
+                <!-- Burger menu -->
+                <h2 class="food-category">Burgers</h2>
+                <div class="burgers-flexbox1">
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p id="item-bigmac" class="food-name">Big Mac</p>
+                            <p id="cal-bigmac" class="calories">Cal: 560</p>
+                            <p id="price-bigmac" class="price">Price: $5.69</p>
+                        </div>
+                        <input id="add-bigmac" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-big-mac.jpg" 
+                            alt="Big Mac" width = "130px" height="130px">
+                        
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Cheeseburger</p>
+                            <p class="calories">Cal: 290</p>
+                            <p class="price">Price: $1.69</p>
+                        </div>
+                        <input id="add-cburger" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-cheeseburger.jpg" 
+                            alt="Cheeseburger" width = "130px" height="130px">
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">McDouble</p>
+                            <p class="calories">Cal: 370</p>
+                            <p class="price">Price: $2.29</p>
+                        </div>
+                        <input id="add-mcdouble" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-mcdouble.jpg" 
+                            alt="McDouble" width = "130px" height="130px">
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Quarter Pounder</p>
+                            <p class="calories">Cal: 520</p>
+                            <p class="price">Price: $5.69</p>
+                        </div>
+                        <input id="add-qp" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-quarter-pounder-cheese.jpg" 
+                            alt="Quarter Pounder" width = "130px" height="130px">
+                    </div>
+                </div>
+
+                <!-- Drinks menu -->
+                <h2 class="food-category">Drinks</h2>
+                <div class="drinks-flexbox2">
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Coca-Cola</p>
+                            <p class="calories">Cal: 130-280</p>
+                            <p class="price">Price (Depends on Size): $1.74 - $2.54</p>
+                        </div>
+                        <input id="add-coke" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-coca-cola.jpg" 
+                            alt="Coca-Cola" width = "80px" height="80px">
+                        
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Fruitopia Strawberry</p>
+                            <p class="calories">Cal: 120-260</p>
+                            <p class="price">Price (Depends on Size): $1.74 - $2.54</p>
+                        </div>
+                        <input id="add-fs" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-fruitopia-strawberry-passion.jpg" 
+                            alt="Fruitopia" width = "80px" height="80px">
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Orange Juice</p>
+                            <p class="calories">Cal: 110 - 220</p>
+                            <p class="price">Price: $1.69 - $2.19</p>
+                        </div>
+                        <input id="add-oj" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-orange-juice.jpg" 
+                            alt="Orange Juice" width = "80px" height="80px">
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Sprite</p>
+                            <p class="calories">Cal: 130 - 280</p>
+                            <p class="price">Price (Depends on Size): $1.74 - $2.54</p>
+                        </div>
+                        <input id="add-sprite" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-sprite.jpg" 
+                            alt="Sprite" width = "80px" height="80px">
+                    </div>
+                </div>
+
+                <!-- Meals menu -->
+                <h2 class="food-category">Meals</h2>
+                <div class="meals-flexbox">
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p id="item-bigmac" class="food-name">Big Mac Meal</p>
+                            <p id="cal-bigmac" class="calories">Cal: 1100</p>
+                            <p id="price-bigmac" class="price">Price: $9.49</p>
+                        </div>
+                        <input id="add-bigmac-meal" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/BigMacMeal.png" 
+                            alt="Big Mac Meal" width = "130px" height="96px">
+                        
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">McChicken Meal</p>
+                            <p class="calories">Cal: 1000</p>
+                            <p class="price">Price: $9.49</p>
+                        </div>
+                        <input id="add-mcchicken-meal" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/McChickenMeal.png" 
+                            alt="McChicken Meal" width = "130px" height="96px">
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">6pc McNuggets Meal</p>
+                            <p class="calories">Cal: 500</p>
+                            <p class="price">Price: $9.49</p>
+                        </div>
+                        <input id="add-6mcnugget-meal" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/6pc-mcnugget-meal.png" 
+                            alt="6pc McNuggets Meal" width = "130px" height="96px">
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">10pc McNuggets Meal</p>
+                            <p class="calories">Cal: 950</p>
+                            <p class="price">Price: $10.89</p>
+                        </div>
+                        <input id="add-10mcnugget-meal" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/10pc-nugget-meal.jpg" 
+                            alt="10pc McNuggets Meal" width = "130px" height="74px">
+                    </div>
+                </div>
+
+                <!-- Sides menu -->
+                <h2 class="food-category">Sides</h2>
+                <div class="sides-flexbox">
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Fries</p>
+                            <p class="calories">Cal: 240-560</p>
+                            <p class="price">Price: $1.69-$3.29</p>
+                        </div>
+                        <input id="add-fries" type="button" value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-fries-medium.jpg" 
+                            alt="Fries" width = "130px" height="74px">
+                        
+                    </div>
+                    <div class="food-item">
+                        <div class="food-info">
+                            <p class="food-name">Poutine</p>
+                            <p class="calories">Cal: 870</p>
+                            <p class="price">Price: $4.49</p>
+                        </div>
+                        <input type="button" onclick='addItem("Poutine", 4.49, "")' value="Add to Order">
+                        <img class ="food-image" src="images/mcdonalds-menu/mcdonalds-poutine.jpg" 
+                            alt="Poutine" width = "130px" height="74px">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="cart">
+                <h1>My Cart</h1>
+                <div id="cart-content">
+                    <ul id="cart-list" class="cart-list">
+                    </ul>
+                    <p id="myTotal"></p>
+                </div>
+
+                <form action="checkout.html">
+                    <input type="submit" value="Checkout Order" onclick="saveToReceipt()">
+                </form>
+            </div>
+
+            <!-- big mac custom  -->
+            <div class="bg-modal-bigmac">
+                <div class="modal-content">
+                    <div id="close-bigmac" class="close">+</div>
+                    <h1>Big Mac Customization</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-big-mac.jpg" 
+                    alt="Big Mac" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Remove from Big Mac</h2>
+                        <input class="option-bigmac" type="checkbox" name="Remove Big Mac Sauce" value="0"  id="rm_bmsauce" onclick="totalIt()" /> 
+                        <label for="rm_bmsauce">Remove Big Mac Sauce</label><br>
+
+                        <input class="option-bigmac" name="Remove Cheese" value="0" type="checkbox" id="rm_cheese" onclick="totalIt()" /> 
+                        <label for="rm_cheese">Remove Cheese</label><br>
+
+                        <input class="option-bigmac" name="Remove Onions" value="0" type="checkbox" id="rm_onions" onclick="totalIt()" /> 
+                        <label for="rm_onions">Remove Onions</label><br>
+
+                        <input class="option-bigmac" name="Remove Lettuce" value="0" type="checkbox" id="rm_lettuce" onclick="totalIt()" /> 
+                        <label for="rm_lettuce">Remove Lettuce</label><br>
+
+                        <input class="option-bigmac" name="Remove Bun" value="0" type="checkbox" id="rm_bun" onclick="totalIt()" /> 
+                        <label for="rm_bun">Remove Middle Bun</label><br>
+
+                        <input class="option-bigmac" name="Remove Pickles" value="0" type="checkbox" id="rm_pickles" onclick="totalIt()"/> 
+                        <label for="rm_pickles">Remove Pickles</label><br><br>
+
+                        <h2>Extra Big Mac Options</h2>
+                        <input class="option-bigmac" name="Extra Big Mac Sauce" value="0.50" type="checkbox" id="extra_bmsauce" onclick="totalIt()" /> 
+                        <label for="extra_bmsauce">Extra Big Mac Sauce: $0.50</label><br>
+
+                        <input class="option-bigmac" name="Extra Cheese" value="0.50" type="checkbox" id="extra_cheese" onclick="totalIt()" /> 
+                        <label for="extra_cheese">Extra Cheese: $0.50</label><br>
+                        
+                        <input class="option-bigmac" name="Extra Onions" value="0.50" type="checkbox" id="extra_onions" onclick="totalIt()" /> 
+                        <label for="extra_onions">Extra Onions: $0.50</label><br>
+
+                        <input class="option-bigmac" name="Extra Pickles" value="0.50" type="checkbox" id="extra_pickles" onclick="totalIt()" /> 
+                        <label for="extra_pickles">Extra Pickles: $0.50</label><br>
+
+                        <input class="option-bigmac" name="Extra Lettuce" value="0.50" type="checkbox" id="extra_lettuce" onclick="totalIt()" /> 
+                        <label for="extra_lettuce">Extra Lettuce: $0.50</label><br>
+
+                        <input class="option-bigmac" name="Extra Meat" value="1.20" type="checkbox" id="extra_meat" onclick="totalIt()"/> 
+                        <label for="extra_meat">Extra Meat Patty: $1.20</label><br>
+
+                        <input class="option-bigmac" name="Add Bacon" value="1" type="checkbox" id="add_bacon" onclick="totalIt()"/>
+                        <label for="add_bacon">Add Bacon: $1.00</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="total" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addBigMac(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cburger custom  -->
+            <div class="bg-modal-cburger">
+                <div class="modal-content">
+                    <div id="close-cburger" class="close">+</div>
+                    <h1>Cheeseburger Customization</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-cheeseburger.jpg" 
+                    alt="Cheeseburger" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Remove from Cheeseburger</h2>
+                        <input class="option-cburger" name="Remove Ketchup" value="0" type="checkbox" id="rm_ketchup" onclick="totalIt2()" /> 
+                        <label for="rm_ketchup">Remove Ketchup</label><br>
+
+                        <input class="option-cburger" name="Remove Mustard" value="0" type="checkbox" id="rm_mustard" onclick="totalIt2()" /> 
+                        <label for="rm_mustard">Remove Mustard</label><br>
+
+                        <input class="option-cburger" name="Remove Onions" value="0" type="checkbox" id="rm_onions" onclick="totalIt2()" /> 
+                        <label for="rm_onions">Remove Onions</label><br>
+
+                        <input class="option-cburger" name="Remove Pickles" value="0" type="checkbox" id="rm_pickles" onclick="totalIt2()"/> 
+                        <label for="rm_pickles">Remove Pickles</label><br><br>
+
+                        <h2>Extra Cheeseburger Options</h2>
+
+                        <input class="option-cburger" name="Extra Cheese" value="0.50" type="checkbox" id="extra_cheese" onclick="totalIt2()" /> 
+                        <label for="extra_cheese">Extra Cheese: $0.50</label><br>
+                        
+                        <input class="option-cburger" name="Extra Onions" value="0.50" type="checkbox" id="extra_onions" onclick="totalIt2()" /> 
+                        <label for="extra_onions">Extra Onions: $0.50</label><br>
+
+                        <input class="option-cburger" name="Extra Pickles" value="0.50" type="checkbox" id="extra_pickles" onclick="totalIt2()" /> 
+                        <label for="extra_pickles">Extra Pickles: $0.50</label><br>
+
+                        <input class="option-cburger" name="Add Lettuce" value="0.50" type="checkbox" id="add_lettuce" onclick="totalIt2()" /> 
+                        <label for="add_lettuce">Add Lettuce: $0.50</label><br>
+
+                        <input class="option-cburger" name="Extra Meat" value="1.20" type="checkbox" id="extra_meat" onclick="totalIt2()"/> 
+                        <label for="extra_meat">Extra Meat Patty: $1.20</label><br>
+
+                        <input class="option-cburger" name="Add Bacon" value="1" type="checkbox" id="add_bacon" onclick="totalIt2()"/>
+                        <label for="add_bacon">Add Bacon: $1.00</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="total2" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addCheeseburger(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mcdouble custom -->
+            <div class="bg-modal-mcdouble">
+                <div class="modal-content">
+                    <div id="close-mcdouble" class="close">+</div>
+                    <h1>McDouble Customization</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-mcdouble.jpg" 
+                    alt="McDouble" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Remove from McDouble</h2>
+                        <input class="option-mcdouble" name="Remove Ketchup" value="0" type="checkbox" id="rm_ketchup" onclick="totalMcdouble()" /> 
+                        <label for="rm_ketchup">Remove Ketchup</label><br>
+
+                        <input class="option-mcdouble" name="Remove Mustard" value="0" type="checkbox" id="rm_mustard" onclick="totalMcdouble()" /> 
+                        <label for="rm_mustard">Remove Mustard</label><br>
+
+                        <input class="option-mcdouble" name="Remove Onions" value="0" type="checkbox" id="rm_onions" onclick="totalMcdouble()" /> 
+                        <label for="rm_onions">Remove Onions</label><br>
+
+                        <input class="option-mcdouble" name="Remove Pickles" value="0" type="checkbox" id="rm_pickles" onclick="totalMcdouble()"/> 
+                        <label for="rm_pickles">Remove Pickles</label><br><br>
+
+                        <h2>Extra McDouble Options</h2>
+
+                        <input class="option-mcdouble" name="Extra Cheese" value="0.50" type="checkbox" id="extra_cheese" onclick="totalMcdouble()" /> 
+                        <label for="extra_cheese">Extra Cheese: $0.50</label><br>
+                        
+                        <input class="option-mcdouble" name="Extra Onions" value="0.50" type="checkbox" id="extra_onions" onclick="totalMcdouble()" /> 
+                        <label for="extra_onions">Extra Onions: $0.50</label><br>
+
+                        <input class="option-mcdouble" name="Extra Pickles" value="0.50" type="checkbox" id="extra_pickles" onclick="totalMcdouble()" /> 
+                        <label for="extra_pickles">Extra Pickles: $0.50</label><br>
+
+                        <input class="option-mcdouble" name="Extra Lettuce" value="0.50" type="checkbox" id="add_lettuce" onclick="totalMcdouble()" /> 
+                        <label for="add_lettuce">Add Lettuce: $0.50</label><br>
+
+                        <input class="option-mcdouble" name="Extra Meat" value="1.20" type="checkbox" id="extra_meat" onclick="totalMcdouble()"/> 
+                        <label for="extra_meat">Extra Meat Patty: $1.20</label><br>
+
+                        <input class="option-mcdouble" name="Add Bacon" value="1" type="checkbox" id="add_bacon" onclick="totalMcdouble()"/>
+                        <label for="add_bacon">Add Bacon: $1.00</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalMcDouble" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addMcDouble(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- quarter pounder custom -->
+            <div class="bg-modal-qp">
+                <div class="modal-content">
+                    <div id="close-qp" class="close">+</div>
+                    <h1>Quarter Pounder</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-quarter-pounder-cheese.jpg"
+                    alt="Quarter Pounder" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Remove from Quarter Pounder</h2>
+                        <input class="option-qp" name="Remove Ketchup" value="0" type="checkbox" id="rm_ketchup" onclick="totalQp()" /> 
+                        <label for="rm_ketchup">Remove Ketchup</label><br>
+
+                        <input class="option-qp" name="Remove Mustard" value="0" type="checkbox" id="rm_mustard" onclick="totalQp()" /> 
+                        <label for="rm_mustard">Remove Mustard</label><br>
+
+                        <input class="option-qp" name="Remove Onions" value="0" type="checkbox" id="rm_onions" onclick="totalQp()" /> 
+                        <label for="rm_onions">Remove Onions</label><br>
+
+                        <input class="option-qp" name="Remove Pickles" value="0" type="checkbox" id="rm_pickles" onclick="totalQp()"/> 
+                        <label for="rm_pickles">Remove Pickles</label><br><br>
+
+                        <h2>Extra Quarter Pounder Options</h2>
+
+                        <input class="option-qp" name="Extra Cheese" value="0.50" type="checkbox" id="extra_cheese" onclick="totalQp()" /> 
+                        <label for="extra_cheese">Extra Cheese: $0.50</label><br>
+                        
+                        <input class="option-qp" name="Extra Onions" value="0.50" type="checkbox" id="extra_onions" onclick="totalQp()" /> 
+                        <label for="extra_onions">Extra Onions: $0.50</label><br>
+
+                        <input class="option-qp" name="Extra Pickles" value="0.50" type="checkbox" id="extra_pickles" onclick="totalQp()" /> 
+                        <label for="extra_pickles">Extra Pickles: $0.50</label><br>
+
+                        <input class="option-qp" name="Extra Lettuce" value="0.50" type="checkbox" id="add_lettuce" onclick="totalQp()" /> 
+                        <label for="add_lettuce">Add Lettuce: $0.50</label><br>
+
+                        <input class="option-qp" name="Extra Meat" value="1.20" type="checkbox" id="extra_meat" onclick="totalQp()"/> 
+                        <label for="extra_meat">Extra Meat Patty: $1.20</label><br>
+
+                        <input class="option-qp" name="Add Bacon" value="1" type="checkbox" id="add_bacon" onclick="totalQp()"/>
+                        <label for="add_bacon">Add Bacon: $1.00</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalQuarterPounder" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addQp(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coca-Cola Custom -->
+            <div class="bg-modal-coke">
+                <div class="modal-content">
+                    <div id="close-coke" class="close">+</div>
+                    <h1>Coca-Cola</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-coca-cola.jpg"
+                    alt="Coca Cola" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Choose Drink Size</h2>
+                        <input class="option-coke" name="size" data-size="Small" value="1.74" type="radio" id="small-coke" onclick="totalCoke()" /> 
+                        <label for="small-coke">Small: $1.74</label><br>
+
+                        <input class="option-coke" name="size" value="2.24" data-size="Medium" type="radio" checked="checked" id="medium-coke" onclick="totalCoke()" /> 
+                        <label for="medium-coke">Medium: $2.24</label><br>
+
+                        <input class="option-coke" name="size" value="2.54" data-size="Large" type="radio" id="large-coke" onclick="totalCoke()" /> 
+                        <label for="large-coke">Large: $2.54</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalCocaCola" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addCoke(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fruitopia Strawberry Custom -->
+            <div class="bg-modal-fs">
+                <div class="modal-content">
+                    <div id="close-fs" class="close">+</div>
+                    <h1>Fruitopia Strawberry</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-fruitopia-strawberry-passion.jpg"
+                    alt="Fruitopia Strawberry" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Choose Drink Size</h2>
+                        <input class="option-fs" name="size" data-size="Small" value="1.74" type="radio" id="small-fs" onclick="totalFs()" /> 
+                        <label for="small-fs">Small: $1.74</label><br>
+
+                        <input class="option-fs" name="size" value="2.24" data-size="Medium" type="radio" checked="checked" id="medium-fs" onclick="totalFs()" /> 
+                        <label for="medium-fs">Medium: $2.24</label><br>
+
+                        <input class="option-fs" name="size" value="2.54" data-size="Large" type="radio" id="large-fs" onclick="totalFs()" /> 
+                        <label for="large-fs">Large: $2.54</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalFruitopia" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addFs(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orange Juice Custom -->
+            <div class="bg-modal-oj">
+                <div class="modal-content">
+                    <div id="close-oj" class="close">+</div>
+                    <h1>Orange Juice</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-orange-juice.jpg"
+                    alt="Orange Juice" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Choose Drink Size</h2>
+                        <input class="option-oj" name="size" data-size="Small" value="1.69" type="radio" id="small-oj" onclick="totalOj()" /> 
+                        <label for="small-oj">Small: $1.69</label><br>
+
+                        <input class="option-oj" name="size" value="1.99" data-size="Medium" type="radio" checked="checked" id="medium-oj" onclick="totalOj()" /> 
+                        <label for="medium-oj">Medium: $1.99</label><br>
+
+                        <input class="option-oj" name="size" value="2.19" data-size="Large" type="radio" id="large-oj" onclick="totalOj()" /> 
+                        <label for="large-oj">Large: $2.19</label><br>
+                    
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalOrangeJuice" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addOj(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sprite Custom -->
+            <div class="bg-modal-sprite">
+                <div class="modal-content">
+                    <div id="close-sprite" class="close">+</div>
+                    <h1>Sprite</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-sprite.jpg"
+                    alt="Sprite" width = "130px" height="130px">
+                    
+                    <div id="food-custom">
+                        <form>
+                            <h2>Choose Drink Size</h2>
+                            <input class="option-sprite" name="size" data-size="Small" value="1.74" type="radio" id="small-sprite" onclick="totalSprite()" /> 
+                            <label for="small-sprite">Small: $1.74</label><br>
+
+                            <input class="option-sprite" name="size" value="2.24" data-size="Medium" type="radio" checked="checked" id="medium-sprite" onclick="totalSprite()" /> 
+                            <label for="medium-sprite">Medium: $2.24</label><br>
+
+                            <input class="option-sprite" name="size" value="2.54" data-size="Large" type="radio" id="large-sprite" onclick="totalSprite()" /> 
+                            <label for="large-sprite">Large: $2.54</label><br>
+                        
+                            <label>
+                                <br> Total
+                                <input value="$0.00" readonly type="text" id="total-sprite" />
+                            </label>
+                            <input type="button" value="Add to Cart" onclick="addSprite(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- big mac meal custom  -->
+            <div class="bg-modal-bigmac-meal">
+                <div class="modal-content">
+                    <div id="close-bigmac-meal" class="close">+</div>
+                    <h1>Big Mac Customization</h1>
+                    <img src="images/mcdonalds-menu/BigMacMeal.png" 
+                    alt="Big Mac" width = "130px" height="96px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Remove from Big Mac</h2>
+                        <input class="option-bigmac-meal" type="checkbox" name="Remove Big Mac Sauce" value="0"  id="rm_bmsauce" onclick="totalBMmeal()" /> 
+                        <label for="rm_bmsauce">Remove Big Mac Sauce</label><br>
+
+                        <input class="option-bigmac-meal" name="Remove Cheese" value="0" type="checkbox" id="rm_cheese" onclick="totalBMmeal()" /> 
+                        <label for="rm_cheese">Remove Cheese</label><br>
+
+                        <input class="option-bigmac-meal" name="Remove Onions" value="0" type="checkbox" id="rm_onions" onclick="totalBMmeal()" /> 
+                        <label for="rm_onions">Remove Onions</label><br>
+
+                        <input class="option-bigmac-meal" name="Remove Lettuce" value="0" type="checkbox" id="rm_lettuce" onclick="totalBMmeal()" /> 
+                        <label for="rm_lettuce">Remove Lettuce</label><br>
+
+                        <input class="option-bigmac-meal" name="Remove Bun" value="0" type="checkbox" id="rm_bun" onclick="totalBMmeal()" /> 
+                        <label for="rm_bun">Remove Middle Bun</label><br>
+
+                        <input class="option-bigmac-meal" name="Remove Pickles" value="0" type="checkbox" id="rm_pickles" onclick="totalBMmeal()"/> 
+                        <label for="rm_pickles">Remove Pickles</label><br><br>
+
+                        <h2>Extra Big Mac Options</h2>
+                        <input class="option-bigmac-meal" name="Extra Big Mac Sauce" value="0.50" type="checkbox" id="extra_bmsauce" onclick="totalBMmeal()" /> 
+                        <label for="extra_bmsauce">Extra Big Mac Sauce: $0.50</label><br>
+
+                        <input class="option-bigmac-meal" name="Extra Cheese" value="0.50" type="checkbox" id="extra_cheese" onclick="totalBMmeal()" /> 
+                        <label for="extra_cheese">Extra Cheese: $0.50</label><br>
+                        
+                        <input class="option-bigmac-meal" name="Extra Onions" value="0.50" type="checkbox" id="extra_onions" onclick="totalBMmeal()" /> 
+                        <label for="extra_onions">Extra Onions: $0.50</label><br>
+
+                        <input class="option-bigmac-meal" name="Extra Pickles" value="0.50" type="checkbox" id="extra_pickles" onclick="totalBMmeal()" /> 
+                        <label for="extra_pickles">Extra Pickles: $0.50</label><br>
+
+                        <input class="option-bigmac-meal" name="Extra Lettuce" value="0.50" type="checkbox" id="extra_lettuce" onclick="totalBMmeal()" /> 
+                        <label for="extra_lettuce">Extra Lettuce: $0.50</label><br>
+
+                        <input class="option-bigmac-meal" name="Extra Meat" value="1.20" type="checkbox" id="extra_meat" onclick="totalBMmeal()"/> 
+                        <label for="extra_meat">Extra Meat Patty: $1.20</label><br>
+
+                        <input class="option-bigmac-meal" name="Add Bacon" value="1" type="checkbox" id="add_bacon" onclick="totalBMmeal()"/>
+                        <label for="add_bacon">Add Bacon: $1.00</label><br><br>
+
+                        <h2>Sides</h2>
+                        <input class="option-bigmac-meal" name="side" data-side="Medium Fries" value="0" type="radio" id="bm-meal-mfries" checked="checked" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-mfries">Medium Fries: Free (Included with Meal)</label><br>
+                        <input class="option-bigmac-meal" name="side" data-side="Large Fries" value="1.00" type="radio" id="bm-meal-lfries" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-lfries">Large Fries: Additional $1.00</label><br>
+                        <input class="option-bigmac-meal" name="side" data-side="Poutine" value="2.00" type="radio" id="bm-meal-poutine" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-poutine">Poutine: Additional $2.00</label><br><br>
+
+                        <h2>Drinks (Medium Drink Included with Meal)</h2>
+                        <input class="option-bigmac-meal" name="drinks" data-drink="Coca-Cola" value="0" type="radio" id="bm-meal-coke" checked="checked" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-coke">Medium Coca Cola: Free</label><br>
+
+                        <input class="option-bigmac-meal" name="drinks" data-drink="Fruitopia Strawberry" value="0" type="radio" id="bm-meal-fs" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-coke">Medium Fruitopia Strawberry: Free</label><br>
+
+                        <input class="option-bigmac-meal" name="drinks" data-drink="Orange Juice" value="0" type="radio" id="bm-meal-oj" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-oj">Medium Orange Juice: Free</label><br>
+
+                        <input class="option-bigmac-meal" name="drinks" data-drink="Sprite" value="0" type="radio" id="bm-meal-sprite" onclick="totalBMmeal()" /> 
+                        <label for="bm-meal-oj">Medium Sprite: Free</label><br>
+       
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalBMMeal" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addBMMeal(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- McChicken meal custom  -->
+            <div class="bg-modal-mcchicken-meal">
+                <div class="modal-content">
+                    <div id="close-mcchicken-meal" class="close">+</div>
+                    <h1>McChicken Customization</h1>
+                    <img src="images/mcdonalds-menu/McChickenMeal.png" 
+                    alt="McChicken" width = "130px" height="96px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Remove from McChicken</h2>
+                        <input class="option-mcchicken-meal" type="checkbox" name="Remove Mayo Sauce" value="0"  id="rm_mccmeal-sauce" onclick="totalMcCMeal()" /> 
+                        <label for="rm_mccmeal-sauce">Remove Mayo Sauce</label><br>
+
+                        <input class="option-mcchicken-meal" name="Remove Lettuce" value="0" type="checkbox" id="rm_mccmeal_lettuce" onclick="totalMcCMeal()" /> 
+                        <label for="rm_mccmeal_lettuce">Remove Lettuce</label><br><br>
+
+                        <h2>Extra McChicken Options</h2>
+                        <input class="option-mcchicken-meal" name="Extra Mayo Sauce" value="0.50" type="checkbox" id="extra_mccmeal_mayo" onclick="totalMcCMeal()" /> 
+                        <label for="extra_mccmeal_mayo">Extra Mayo Sauce: $0.50</label><br>
+
+                        <input class="option-mcchicken-meal" name="Extra Lettuce" value="0.50" type="checkbox" id="extra_mccmeal_lettuce" onclick="totalMcCMeal()" /> 
+                        <label for="extra_mccmeal_lettuce">Extra Lettuce: $0.50</label><br>
+
+                        <input class="option-mcchicken-meal" name="Extra Chicken" value="1.20" type="checkbox" id="extra_meat" onclick="totalMcCMeal()"/> 
+                        <label for="extra_mccmeal_pickles">Extra Chicken: $1.20</label><br>
+
+                        <input class="option-mcchicken-meal" name="Add Bacon" value="1" type="checkbox" id="add_mccmeal_bacon" onclick="totalMcCMeal()"/>
+                        <label for="add_mccmeal_bacon">Add Bacon: $1.00</label><br>
+
+                        <input class="option-mcchicken-meal" name="Add Cheese" value="0.50" type="checkbox" id="add_mccmeal_cheese" onclick="totalMcCMeal()" /> 
+                        <label for="add_mccmeal_cheese">Add Cheese: $0.50</label><br>
+                        
+                        <input class="option-mcchicken-meal" name="Add Onions" value="0.50" type="checkbox" id="add_mccmeal_onions" onclick="totalMcCMeal()" /> 
+                        <label for="add_mccmeal_onions">Add Onions: $0.50</label><br>
+
+                        <input class="option-mcchicken-meal" name="Add Pickles" value="0.50" type="checkbox" id="add_mccmeal_pickles" onclick="totalMcCMeal()" /> 
+                        <label for="add_mccmeal_pickles">Add Pickles: $0.50</label><br><br>
+                    
+
+                        <h2>Sides</h2>
+                        <input class="option-mcchicken-meal" name="side" data-side="Medium Fries" value="0" type="radio" id="mcc-meal-mfries" checked="checked" onclick="totalMcCMeal()" /> 
+                        <label for="mcc-meal-mfries">Medium Fries: Free (Included with Meal)</label><br>
+                        <input class="option-mcchicken-meal" name="side" data-side="Large Fries" value="1.00" type="radio" id="mcc-meal-lfries" onclick="totalMcCMeal()" /> 
+                        <label for="mcc-meal-lfries">Large Fries: Additional $1.00</label><br>
+                        <input class="option-mcchicken-meal" name="side" data-side="Poutine" value="2.00" type="radio" id="mcc-meal-poutine" onclick="totalMcCMeal()" /> 
+                        <label for="mcc-meal-poutine">Poutine: Additional $2.00</label><br><br>
+
+                        <h2>Drinks (Medium Drink Included with Meal)</h2>
+                        <input class="option-mcchicken-meal" name="drinks" data-drink="Coca-Cola" value="0" type="radio" id="mcc-meal-coke" checked="checked" onclick="totalMcCMeal()" /> 
+                        <label for="bm-meal-coke">Medium Coca Cola: Free</label><br>
+
+                        <input class="option-mcchicken-meal" name="drinks" data-drink="Fruitopia Strawberry" value="0" type="radio" id="mcc-meal-fs" onclick="totalMcCMeal()" /> 
+                        <label for="mcc-meal-fs">Medium Fruitopia Strawberry: Free</label><br>
+
+                        <input class="option-mcchicken-meal" name="drinks" data-drink="Orange Juice" value="0" type="radio" id="mcc-meal-oj" onclick="totalMcCMeal()" /> 
+                        <label for="mcc-meal-oj">Medium Orange Juice: Free</label><br>
+
+                        <input class="option-mcchicken-meal" name="drinks" data-drink="Sprite" value="0" type="radio" id="mcc-meal-sprite" onclick="totalMcCMeal()" /> 
+                        <label for="mcc-meal-sprite">Medium Sprite: Free</label><br>
+       
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="totalMccMeal" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addMcCMeal(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6pc Chicken McNuggets meal custom  -->
+            <div class="bg-modal-6mcnugget-meal">
+                <div class="modal-content">
+                    <div id="close-6mcnugget-meal" class="close">+</div>
+                    <h1>McNugget Customization</h1>
+                    <img src="images/mcdonalds-menu/6pc-mcnugget-meal.png" 
+                    alt="6pc McNugget Meal" width = "130px" height="96px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Choose Dipping Sauce</h2>
+                        <input class="option-6mcnugget-meal" name="sauce" data-sauce="BBQ Sauce" value="0" type="radio" id="6mcn-meal-bbq" checked="checked" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-bbq">BBQ</label><br>
+                        <input class="option-6mcnugget-meal" name="sauce" data-sauce="Honey Mustard Sauce" value="0" type="radio" id="6mcn-meal-hm" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-hm">Honey Mustard</label><br>
+                        <input class="option-6mcnugget-meal" name="sauce" data-sauce="Sweet and Sour Sauce" value="0" type="radio" id="6mcn-meal-ss" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-ss">Sweet and Sour</label><br><br>
+
+                        <h2>Sides</h2>
+                        <input class="option-6mcnugget-meal" name="side" data-side="Medium Fries" value="0" type="radio" id="6mcn-meal-mfries" checked="checked" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-mfries">Medium Fries: Free (Included with Meal)</label><br>
+                        <input class="option-6mcnugget-meal" name="side" data-side="Large Fries" value="1.00" type="radio" id="6mcn-meal-lfries" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-lfries">Large Fries: Additional $1.00</label><br>
+                        <input class="option-6mcnugget-meal" name="side" data-side="Poutine" value="2.00" type="radio" id="6mcn-meal-poutine" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-poutine">Poutine: Additional $2.00</label><br><br>
+
+                        <h2>Drinks (Medium Drink Included with Meal)</h2>
+                        <input class="option-6mcnugget-meal" name="drinks" data-drink="Coca-Cola" value="0" type="radio" id="6mcn-meal-coke" checked="checked" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-coke">Medium Coca Cola: Free</label><br>
+
+                        <input class="option-6mcnugget-meal" name="drinks" data-drink="Fruitopia Strawberry" value="0" type="radio" id="6mcn-meal-fs" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-fs">Medium Fruitopia Strawberry: Free</label><br>
+
+                        <input class="option-6mcnugget-meal" name="drinks" data-drink="Orange Juice" value="0" type="radio" id="6mcn-meal-oj" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-oj">Medium Orange Juice: Free</label><br>
+
+                        <input class="option-6mcnugget-meal" name="drinks" data-drink="Sprite" value="0" type="radio" id="6mcn-meal-sprite" onclick="total6McNMeal()" /> 
+                        <label for="6mcn-meal-sprite">Medium Sprite: Free</label><br>
+       
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="total6McnMeal" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="add6McNMeal(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10pc Chicken McNuggets meal custom  -->
+            <div class="bg-modal-10mcnugget-meal">
+                <div class="modal-content">
+                    <div id="close-10mcnugget-meal" class="close">+</div>
+                    <h1>McNugget Customization</h1>
+                    <img src="images/mcdonalds-menu/10pc-nugget-meal.jpg" 
+                    alt="10pc McNugget Meal" width = "130px" height="74px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Choose Dipping Sauce</h2>
+                        <input class="option-10mcnugget-meal" name="sauce" data-sauce="BBQ Sauce" value="0" type="radio" id="10mcn-meal-bbq" checked="checked" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-bbq">BBQ</label><br>
+                        <input class="option-10mcnugget-meal" name="sauce" data-sauce="Honey Mustard Sauce" value="0" type="radio" id="10mcn-meal-hm" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-hm">Honey Mustard</label><br>
+                        <input class="option-10mcnugget-meal" name="sauce" data-sauce="Sweet and Sour Sauce" value="0" type="radio" id="10mcn-meal-ss" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-ss">Sweet and Sour</label><br><br>
+
+                        <h2>Sides</h2>
+                        <input class="option-10mcnugget-meal" name="side" data-side="Medium Fries" value="0" type="radio" id="10mcn-meal-mfries" checked="checked" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-mfries">Medium Fries: Free (Included with Meal)</label><br>
+                        <input class="option-10mcnugget-meal" name="side" data-side="Large Fries" value="1.00" type="radio" id="10mcn-meal-lfries" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-lfries">Large Fries: Additional $1.00</label><br>
+                        <input class="option-10mcnugget-meal" name="side" data-side="Poutine" value="2.00" type="radio" id="10mcn-meal-poutine" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-poutine">Poutine: Additional $2.00</label><br><br>
+
+                        <h2>Drinks (Medium Drink Included with Meal)</h2>
+                        <input class="option-10mcnugget-meal" name="drinks" data-drink="Coca-Cola" value="0" type="radio" id="10mcn-meal-coke" checked="checked" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-coke">Medium Coca Cola: Free</label><br>
+
+                        <input class="option-10mcnugget-meal" name="drinks" data-drink="Fruitopia Strawberry" value="0" type="radio" id="10mcn-meal-fs" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-fs">Medium Fruitopia Strawberry: Free</label><br>
+
+                        <input class="option-10mcnugget-meal" name="drinks" data-drink="Orange Juice" value="0" type="radio" id="10mcn-meal-oj" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-oj">Medium Orange Juice: Free</label><br>
+
+                        <input class="option-10mcnugget-meal" name="drinks" data-drink="Sprite" value="0" type="radio" id="10mcn-meal-sprite" onclick="total10McNMeal()" /> 
+                        <label for="10mcn-meal-sprite">Medium Sprite: Free</label><br>
+       
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="total10McnMeal" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="add10McNMeal(); " />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fries meal custom  -->
+            <div class="bg-modal-fries">
+                <div class="modal-content">
+                    <div id="close-fries" class="close">+</div>
+                    <h1>Fries Customization</h1>
+                    <img src="images/mcdonalds-menu/mcdonalds-fries-medium.jpg" 
+                    alt="Fries" width = "130px" height="74px">
+                    
+                    <div id="food-custom">
+                        <form>
+                        <h2>Choose Size</h2>
+                        <input class="option-fries" name="size" data-size="Small" value="1.69" type="radio" id="small-fries" checked="checked" onclick="totalFries()" /> 
+                        <label for="small-fries">Small Fries: $1.69</label><br>
+
+                        <input class="option-fries" name="size" data-size="Medium" value="2.89" type="radio" id="medium-fries" onclick="totalFries()" /> 
+                        <label for="medium-fries">Medium Fries: $2.89</label><br>
+
+                        <input class="option-fries" name="size" data-size="Large" value="3.29" type="radio" id="large-fries" onclick="totalFries()" /> 
+                        <label for="large-fries">Large Fries: $3.29</label><br>
+       
+                        <label>
+                            <br> Total
+                            <input value="$0.00" readonly type="text" id="total-fries" />
+                        </label>
+                        <input type="button" value="Add to Cart" onclick="addFries(); " />
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            
+        </div>
+
+        <!-- <footer>
+            <p>Contact<br>
+            <a href="mailto:hege@example.com">hege@example.com</a></p>
+        </footer> -->
+       
+    </body>
+</html>

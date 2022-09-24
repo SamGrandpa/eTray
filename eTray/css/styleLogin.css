@@ -1,0 +1,30 @@
+body { font-family: 'Couier New', Courier, monospace; }
+
+
+input[type = text], input[type = password] {
+  width: 75%;
+  display: inline-block;
+  margin: 2%;
+}
+
+t1{
+  padding: 10px;
+}
+
+t2{
+  padding: 10px;
+}
+
+t3{
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  margin: 5% 7%;
+  width: 10%
+}
+
+.login{
+  padding: 10%;
+}

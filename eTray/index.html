@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="css/style.css">    
+        <script defer src="js/index.js"></script>
+    </head>
+
+    <body>
+        <!-- navigation menu: buttons and search bar -->
+     <header>
+        <a class="logo" href="index.html">
+            <img src="images/eTray_logo.svg" alt="eTray logo" height= 100px width=auto>
+        </a>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="nearby.html">Restaurants</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        
+     </header>
+	 <footer>
+  <p>Contact<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+        <!-- <form id="form" action="nearby.html"> -->
+        <form id="form" action="nearby.html">
+            <div class="AddressContainer">
+                <div id="error"></div>
+                <div>
+                    <input type="text" id="address" autocomplete="off" name="address" placeholder="Enter Your Address">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form> 
+       
+    </body>
+</html>
